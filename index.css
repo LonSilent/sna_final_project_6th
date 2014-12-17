@@ -1,0 +1,18 @@
+#map{
+	width: 45%;
+	float: left;
+	padding-right: 3%;
+}
+#taiwanMap{
+	width: 100%;
+}
+.block-img{
+	width: 200px;	
+}
+.recommend ul li{
+	list-style-type: none;
+	padding-left: 0px;
+}
+#recommend-ul{
+	padding-left: 0px;
+}
