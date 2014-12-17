@@ -4,3 +4,22 @@
 	float: left;
 	padding: 30px;
 }
+.category{
+	width: 70%;
+	position: relative;
+	float: left;
+min-height: 100px;
+padding-left: 4%;
+}
+.category-name{
+	background-color: rgba(246,246,246,1.00);
+	margin-bottom: 4%;
+}
+.category-item{
+	margin-bottom: 4%;
+	height: 320px;
+	background-color: rgba(246,246,246,1.00);
+}
+.category-detail{
+	padding: 10px;
+}
