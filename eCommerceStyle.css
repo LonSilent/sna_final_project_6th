@@ -66,6 +66,17 @@ header {
 	padding-top: 36px;
 	height: 784px;
 }
+#content .sidebar2 {
+	font-family: 'Montserrat', sans-serif;
+	float: left;
+	width: 20%;
+	padding-left: 3%;
+	padding-right: 3%;
+	text-align: center;
+	padding-top: 36px;
+	height: 240px;
+	font-size: 12px;
+}
 /* main content of the site */
 #content .mainContent {
 	float: left;
