@@ -1,0 +1,12 @@
+#pic-select{
+	width: 340px;
+	height: 720px;
+	float: left;
+	padding: 30px;
+}
+#selected-pic{
+	width: 320px;
+}
+#input{
+	padding: 30px;
+}
