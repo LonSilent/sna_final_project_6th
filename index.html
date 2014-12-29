@@ -26,19 +26,16 @@
 					LOGO 
 				</div>
 			</a>
-			<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+			<fb:login-button scope="public_profile,email,user_friends" onlogin="checkLoginState();">
 		</fb:login-button>
 
 		<div id="status">
 		</div>
-		<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-</fb:login-button>
 
-<div id="status">
-</div>
 		<div id="headerLinks">
 			<a href="create.html" title="create">建立食記</a>
-			<a href="#" title="Login/Register">Login/Register</a>
+			<a href="#" title="Login/Register" id="LogIn">Login/Register</a>
+			<a href="#" title="Login/Register" id="LogOut">Logout</a>
 		</div>
 	</header>
 	<section id="offer"> 
