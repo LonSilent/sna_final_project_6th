@@ -47,7 +47,8 @@ header {
 	clear: both;
 	background-color: rgba(246,246,246,1.00);
 	color: rgba(146,146,146,1.00);
-	padding-left: 115px;
+	/*padding-left: 115px;*/
+	padding-left: 60px;
 	padding-top: 57px;
 	padding-bottom: 57px;
 }
