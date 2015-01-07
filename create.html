@@ -100,19 +100,32 @@ $(document)
 				<p>標題：<input type="text" placeholder="標題..."></p>
 
 				<p>用餐日期：<input type="date" placeholder="用餐日期..." ></p>
-				<div class="ui stacked segment">
+				<div class="ui orange stacked segment">
 					<h3>餐廳資料</h3>
-					<div class="address-zone">地址：
+					<div class="address-zone">
+						<label>地址：</label>
 					</br>
 					<select class="city"></select>
 					<select class="county"></select>
 					<input type="text" id="address" placeholder="地址...">
 				</div></br>
-				<p>電話：<input type="text" id="phone" placeholder="電話..."></p>
+				<div class="ui form">
+					<div class="inline fields">
+						<div class="field">
+							<label>餐廳電話</label>
+							<input type="text" placeholder="(xx)">
+						</div>
+						<div class="field">
+							<input type="text" placeholder="xxxx">
+						</div>
+						<div class="field">
+							<input type="text" placeholder="xxxx">
+						</div>
+					</div>
+				</div>
 				<p>菜式：<input type="text" id="category_tag" placeholder="菜式..."></p>
 				<p>食物分類：<input type="text" id="food_tag" placeholder="食物分類..."></p>
 				<p>人均消費：<input type="text" id="cost" placeholder="人均消費..."></p>
-
 				<p>營業時間：<input type="text" id="worktime" placeholder="營業時間..."></p>
                  
 
@@ -126,7 +139,7 @@ $(document)
 				<div class="ui huge star rating" data-max-rating="5" data-rating="4">
 				</div>
 			</div>
-			</div>
+			</div></br>
 			<div id="Button" class="btn-group"> <!--建立的按鈕-->
 				<!--	<button class="btn" id="create_btn">建 立</button> -->
 				<button class="ui button">
