@@ -23,3 +23,34 @@ padding-left: 4%;
 .category-detail{
 	padding: 10px;
 }
+#tabs li{
+  background: #ddd;
+  border: 1px solid #ccc;
+  border-bottom: none;
+  display: inline-block;
+  margin-right: 5px;
+  padding: 5px 10px;
+  color: #999;
+  cursor: pointer;
+}
+#tabs li:hover{
+  color: #666;
+}
+#tabs li.enable{
+  border-bottom: 1px solid #ddd;
+  margin-bottom: -1px;
+  color: #333;
+}
+#contents{
+  background: #ddd;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 16px #ccc;
+}
+#contents > div{
+  display: none;
+  text-align: justify;
+  padding: 10px 15px;
+}
+#contents > div:first-of-type{
+  display: block;
+}
