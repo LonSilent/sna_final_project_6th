@@ -37,7 +37,7 @@ header {
 /* Links in header */
 #headerLinks a {
 	text-decoration: none;
-	color: rgba(255,255,255,1.00);
+	color: rgba(0,0,0,1.00);
 	padding-left: 66px;
 	font-size: 14px;
 }
@@ -62,7 +62,7 @@ header {
 /* Sidebar */
 #content .sidebar {
 	font-family: 'Montserrat', sans-serif;
-	color: rgba(146,146,146,1.00);
+	/*color: rgba(146,146,146,1.00);*/
 	float: left;
 	width: 20%;
 	padding-left: 3%;
@@ -93,7 +93,7 @@ header {
 /*menubar's properties for menus in sidebar */
 #content .sidebar #menubar {
 	text-align: left;
-	color: rgba(146,146,146,1.00);
+	/*color: rgba(146,146,146,1.00);*/
 	position: relative;
 	left: 0%;
 }
@@ -202,11 +202,11 @@ footer div a {
 }
 /*Links in sidebar */
 .sidebar #menubar .menu ul li a {
-	color: rgba(146,146,146,1.00);
+	color: rgba(255,255,255,1.00);
 	text-decoration: none;
 }
 .sidebar #menubar .menu ul li a:hover {
-	color: rgba(107,97,97,1.00);
+	color: rgba(255,255,255,1.00);
 	text-decoration: none;
 }
 /* Menu headings in sidebar */
@@ -426,4 +426,7 @@ header #headerLinks a {
 	padding-left: 0px;
 }
 
+hr {
+	margin-top:5px;
+	margin-bottom:5px;
 }
