@@ -16,6 +16,8 @@
 			$('.address-zone').ajaddress();
 		});
 	</script>
+	<script src="http://www.parsecdn.com/js/parse-1.3.3.min.js"></script>
+	<script type="text/javascript" src="js/parse.js"></script>
 </head>
 <body>
 	<div id="mainWrapper">
@@ -36,27 +38,30 @@
 			<!-- The offer section displays a banner text for promotions -->
 			<h1>美食記趣</h1>
 			<p>分享餐廳從你我開始</p>
+			<button onclick="submit()">
 		</section>
 		<div id="content">
-			<div id="pic-select">
-				<img src="#" id="selected-pic">
-				<input type="file" name="img">
-			</div>
-			<div id="input">
-				<p>店名：<input type="text" id="name"></p>
-				<div class="address-zone">地址：
-
-					<select class="city"></select>
-					<select class="county"></select>
-					<input type="text" id="address">
+		
+				<div id="pic-select">
+					<img src="" id="selected-pic">
+					<input type="file" id="profilePhotoFileUpload" name="img" >
 				</div>
-				<p>分類：<input type="text" id="tag"></p>
-				<p>介紹：</p>
-				<textarea name="comments" rows="30" cols="70"></textarea>
-			</div>
-			<div id="Button" class="btn-group"> <!--建立的按鈕-->
-				<button class="btn" id="create_btn">建 立</button>
-			</div>
+				<div id="input">
+					<p>店名：<input type="text" id="name"></p>
+					<div class="address-zone">地址：
+
+						<select class="city"></select>
+						<select class="county"></select>
+						<input type="text" id="address">
+					</div>
+					<p>分類：<input type="text" id="tag"></p>
+					<p>介紹：</p>
+					<textarea name="comments" rows="30" cols="70"></textarea>
+				</div>
+				<div id="Button" class="btn-group"> <!--建立的按鈕-->
+					<button onclick="submit()" class="btn" id="create_btn">建 立</button>
+				</div>
+			
 		</div>
 		<footer> 
 
@@ -68,6 +73,7 @@
 				<p>&nbsp;</p>
 			</div>
 		</footer>
+		
 	</div>
 </body>
 </html>
