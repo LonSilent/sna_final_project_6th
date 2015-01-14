@@ -22,8 +22,7 @@ function statusChangeCallback(response) {
      IfLoggedIn.style.display="inline-block";
      var IfNotLoggedIn=document.getElementById("LogOut");
      IfNotLoggedIn.style.display="none";
-     var Manage=document.getElementById("manage");
-      Manage.style.display="none";
+     
      // The person is logged into Facebook, but not your app.
      // document.getElementById('status').innerHTML = 'Please log ' +
      //  'into this app.';
@@ -103,10 +102,7 @@ function statusChangeCallback(response) {
             location.reload();  // refresh
           });
       });
-  FB.api('/me',{fields:'picture'},function(e){
-          Manage.innerHTML='<img src="http://graph.facebook.com/'+e.url+'"/>';
-        });
-};
+  
 
 
   // Load the SDK asynchronously
@@ -126,6 +122,9 @@ function statusChangeCallback(response) {
   		console.log('Successful login for: ' + response.name);
   		document.getElementById('status').innerHTML =
   		'Welcome, ' + response.name + '!';
+var Manage=document.getElementById("manage");
+      //Manage.style.display="none";
+      Manage.innerHTML='<img src="http://graph.facebook.com/'+response.photo+'"/>';
   	});
   }
 
