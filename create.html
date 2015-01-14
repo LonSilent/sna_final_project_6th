@@ -97,7 +97,7 @@ $(document)
 				<input type="file" name="img">
 			</div>
 			<div class="ui input" id="input">
-				<p>標題：<input type="text" placeholder="標題..."></p>
+				<p>標題：<input class="bordercircle"type="text" placeholder="標題..."></p>
 
 				<p>用餐日期：<input type="date" placeholder="用餐日期..." ></p>
 				<div class="ui orange stacked segment">
@@ -106,41 +106,42 @@ $(document)
 						<p>地址：</p>
 					<select class="city"></select>
 					<select class="county"></select>
-					<input type="text" id="address" placeholder="地址...">
+				<input type="text" id="address" class="bordercircle"placeholder="地址...">
 				</div></br>
+				<p>餐廳電話：</p>
 				<div class="ui form">
 					<div class="inline fields">
 						<div class="field">
-							<p>餐廳電話：</p>
-							<input id="numlocate"type="text" placeholder="(xx)">
+							
+							<input class="bordercircle"id="numlocate"type="text" placeholder="(xx)">
 						</div>
 						<div class="field">
-							<input id="NumFirst"type="text" placeholder="xxxx">
+							<input class="bordercircle"id="NumFirst"type="text" placeholder="xxxx">
 						</div>
 						<div class="field">
-							<input id="NumSecond"type="text" placeholder="xxxx">
+							<input class="bordercircle"id="NumSecond"type="text" placeholder="xxxx">
 						</div>
 					</div>
 				</div>
 				<p>菜式：</p>
 				<select id="foodtype">
-					<option id="JPN"value="JPN">日式料理</option>
-					<option id="USA"value="USA">美式料理</option>
-					<option id="ITA"value="ITA">義式料理</option>
-					<option id="EUR"value="EUR">歐式料理</option>
-					<option id="TWN"value="TWN">台式料理</option>
-					<option id="CHN"value="CHN">中式料理</option>
-					<option id="breakfast"value="breakfast">早餐</option>
-					<option id="brunch"value="brunch">早午餐</option>
-					<option id="teatime"value="teatime">下午茶</option>
+					<option id="JPN" value="JPN">日式料理</option>
+					<option id="USA" value="USA">美式料理</option>
+					<option id="ITA" value="ITA">義式料理</option>
+					<option id="EUR" value="EUR">歐式料理</option>
+					<option id="TWN" value="TWN">台式料理</option>
+					<option id="CHN" value="CHN">中式料理</option>
+					<option id="breakfast" value="breakfast">早餐</option>
+					<option id="brunch" value="brunch">早午餐</option>
+					<option id="teatime" value="teatime">下午茶</option>
 				</select>
-				<p>食物分類：<input type="text" id="food_tag" placeholder="食物分類..."></p>
-				<p>人均消費：<input type="text" id="cost" placeholder="人均消費..."></p>
-				<p>營業時間：<input type="text" id="worktime" placeholder="營業時間..."></p>
+				<p>食物分類：<input class="bordercircle"type="text" id="food_tag" placeholder="食物分類..."></p>
+				<p>人均消費(NT$)：<input class="bordercircle"type="text" id="cost" placeholder="人均消費..."></p>
+				<p>營業時間：<input class="bordercircle"type="text" id="worktime" placeholder="營業時間..."></p>
 			</div>
 
 			<p>內容：</p>
-			<textarea id="maintext" name="comments" rows="30" cols="70" placeholder="內容..."></textarea>
+			<textarea class="bordercircle"id="maintext" name="comments" rows="30" cols="70" placeholder="內容..."></textarea>
 			<p>整體評分：</p>
 			<div class="rating demos">
 				<div class="items">
