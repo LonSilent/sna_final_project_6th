@@ -1,13 +1,23 @@
-(function($){
-  /* 用 each 遍歷頁籤*/
-  $('#tabs li').each(function(i){
-    var _i = i;
-    /* 綁定 click 事件到頁籤上，若要改為滑鼠移入切換頁籤的話，將 click 改為 mouseenter*/
-    $(this).click(function(){
-      /* 移除其他頁籤的 class，並將 class 新增至所選頁籤*/
-      $(this).parent().children().removeClass('enable').eq(_i).addClass('enable');
-      /* 隱藏其他頁籤的內容，並顯示所選頁籤的內容*/
-      $('#contents').children('div').hide().eq(_i).show();
-    });
-  });
-})(jQuery);
+$(function(){
+	// 預設顯示第一個 Tab
+	var _showTab = 0;
+	var $defaultLi = $('ul.tabs li').eq(_showTab).addClass('active');
+	$($defaultLi.find('a').attr('href')).siblings().hide();
+ 
+	// 當 li 頁籤被點擊時...
+	// 若要改成滑鼠移到 li 頁籤就切換時, 把 click 改成 mouseover
+	$('ul.tabs li').click(function() {
+		// 找出 li 中的超連結 href(#id)
+		var $this = $(this),
+			_clickTab = $this.style.display:"none";
+		// 把目前點擊到的 li 頁籤加上 .active
+		// 並把兄弟元素中有 .active 的都移除 class
+		$this.addClass('active').siblings('.active').removeClass('active');
+		// 淡入相對應的內容並隱藏兄弟元素
+		$(_clickTab).stop(false, true).fadeIn().siblings().hide();
+ 
+		return false;
+	}).find('a').focus(function(){
+		this.blur();
+	});
+});
