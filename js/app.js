@@ -17,8 +17,7 @@ function statusChangeCallback(response) {
       Manage.style.display="inline-block";
       
       FB.api(
-        '/me',
-      ,function(e){
+        '/me',function(e){
           Manage.innerHTML='<img src="http://graph.facebook.com/'+e+'/?fields=picture"/>';
         });
     } else if (response.status === 'not_authorized') {
