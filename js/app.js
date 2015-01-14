@@ -17,7 +17,7 @@ function statusChangeCallback(response) {
       Manage.style.display="inline-block";
       
       FB.api(
-        "/me/picture",
+        
         {
           "redirect":false,
           "height":"200",
