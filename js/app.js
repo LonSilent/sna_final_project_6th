@@ -17,14 +17,9 @@ function statusChangeCallback(response) {
       Manage.style.display="inline-block";
       
       FB.api(
-        
-        {
-          "redirect":false,
-          "height":"200",
-          "type":"normal",
-          "width":"200"
-        },function(response){
-          Manage.innerHTML='<img src="http://graph.facebook.com/'+response.id+'?fields=picture"/>';
+        '/me',
+      ,function(e){
+          Manage.innerHTML='<img src="http://graph.facebook.com/'+e+'/?fields=picture"/>';
         });
     } else if (response.status === 'not_authorized') {
      var IfLoggedIn=document.getElementById("LogIn");
