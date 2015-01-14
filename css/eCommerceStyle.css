@@ -95,7 +95,6 @@ header {
 }
 /*menubar's properties for menus in sidebar */
 #content .sidebar #menubar {
-	text-align: left;
 	/*color: rgba(146,146,146,1.00);*/
 	position: relative;
 	left: 0%;
