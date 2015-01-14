@@ -480,3 +480,7 @@ hr {
 #contents > div:first-of-type{
   display: block;
 }
+.relogo{
+	padding-right:800px;
+	height: 50px;
+}
