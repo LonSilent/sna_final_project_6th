@@ -71,6 +71,36 @@ function statusChangeCallback(response) {
   FB.getLoginStatus(function(response) {
   	statusChangeCallback(response);
   });
+  // define the events when login status changed.
+    FB.Event.subscribe('auth.login', function(response) {
+
+        if (response.status=="connected"){ // if logged in
+            var IfLoggedInDiv=document.getElementById("LogOut");
+            IfLoggedInDiv.style.display="inline-block";
+            var IfNotLoggedInDiv=document.getElementById("LogIn");
+            IfNotLoggedInDiv.style.display="none";
+
+            // get access token
+            ACCESS_TOKEN=response.authResponse.accessToken;
+            //console.log('ACCESS_TOKEN: '+ACCESS_TOKEN);
+
+            // get user id
+            userid=response.authResponse.userID;
+            console.log('userid: '+userid);
+        }
+    });
+            
+    FB.Event.subscribe('auth.logout', function(response) {
+        if (response.status!="connected"){ // if logged out
+            var IfLoggedInDiv=document.getElementById("LogOut");
+            IfLoggedInDiv.style.display="none";
+            var IfNotLoggedInDiv=document.getElementById("LogIn");
+            IfNotLoggedInDiv.style.display="inline-block";
+            FB.logout(function(response){
+                location.reload();  // refresh
+            });
+        }
+    });
   $("#LogIn").click(function(){   
         //alert("click on login-btn"); 
         FB.login(function(response) {
