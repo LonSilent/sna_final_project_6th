@@ -102,7 +102,7 @@ function statusChangeCallback(response) {
             location.reload();  // refresh
           });
       });
-  
+  };
 
 
   // Load the SDK asynchronously
