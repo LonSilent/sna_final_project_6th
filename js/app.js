@@ -15,6 +15,7 @@ function statusChangeCallback(response) {
       IfNotLoggedIn.style.display="inline-block";
       var Manage=document.getElementById("manage");
       Manage.style.display="inline-block";
+      Manage.src="http://graph.facebook.com/me?fields=picture";
       FB.api(
         "/me/picture",
         {
