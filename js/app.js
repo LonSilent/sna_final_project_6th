@@ -13,12 +13,25 @@ function statusChangeCallback(response) {
       IfLoggedIn.style.display="none";
       var IfNotLoggedIn=document.getElementById("LogOut");
       IfNotLoggedIn.style.display="inline-block";
-      testAPI();
+      var Manage=document.getElementById("manage");
+      Manage.style.display="inline-block";
+      FB.api(
+        "/me/picture",
+        {
+          "redirect":false,
+          "height":"200",
+          "type":"normal",
+          "width":"200"
+        },function(response){
+          Manage.src="http://graph.facebook.com/me?fields=picture";
+        })
     } else if (response.status === 'not_authorized') {
      var IfLoggedIn=document.getElementById("LogIn");
      IfLoggedIn.style.display="inline-block";
      var IfNotLoggedIn=document.getElementById("LogOut");
      IfNotLoggedIn.style.display="none";
+     var Manage=document.getElementById("manage");
+      Manage.style.display="none";
      // The person is logged into Facebook, but not your app.
      // document.getElementById('status').innerHTML = 'Please log ' +
      //  'into this app.';
@@ -72,7 +85,7 @@ function statusChangeCallback(response) {
         FB.login(function(response) {
             //console.log(response);
             if (response.status == "connected") {
-              
+
               var IfLoggedIn=document.getElementById("LogIn");
               IfLoggedIn.style.display="none";
               var IfNotLoggedIn=document.getElementById("LogOut");
