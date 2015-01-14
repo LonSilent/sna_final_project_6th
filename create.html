@@ -78,8 +78,18 @@ $(document)
 				</div>
 			</a>
 			<div id="headerLinks">
-				<a href="create.html" title="create">建立食記</a>
-				<a href="#" title="Login/Register">Login/Register</a>
+				<a href="create.html" title="create"><div class="orange ui buttons">
+				<div class="ui button">建立食記</div>
+  
+</div></a>
+			
+			
+			<a title="Login/Register" id="LogIn"><div class="orange ui buttons">
+  <div class="ui button">Login</div>
+
+</div></a>
+			<a href="#LogOut" title="Login/Register" id="LogOut"><div class="orange ui buttons">
+				<div class="ui button">Logout</div>
 			</div>
 		</header>
 		<section id="offer"> 
@@ -91,7 +101,7 @@ $(document)
 				
 			</a>
 		</section>
-		<div id="content">
+		<div id="content" class="menu2">
 			<div id="pic-select">
 				<img src="#" id="selected-pic">
 				<input type="file" name="img">
