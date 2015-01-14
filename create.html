@@ -103,8 +103,7 @@ $(document)
 				<div class="ui orange stacked segment">
 					<h3>餐廳資料</h3>
 					<div class="address-zone">
-						<label>地址：</label>
-					</br>
+						<p>地址：</p>
 					<select class="city"></select>
 					<select class="county"></select>
 					<input type="text" id="address" placeholder="地址...">
@@ -112,28 +111,28 @@ $(document)
 				<div class="ui form">
 					<div class="inline fields">
 						<div class="field">
-							<label>餐廳電話</label>
-							<input type="text" placeholder="(xx)">
+							<p>餐廳電話：</p>
+							<input id="numlocate"type="text" placeholder="(xx)">
 						</div>
 						<div class="field">
-							<input type="text" placeholder="xxxx">
+							<input id="NumFirst"type="text" placeholder="xxxx">
 						</div>
 						<div class="field">
-							<input type="text" placeholder="xxxx">
+							<input id="NumSecond"type="text" placeholder="xxxx">
 						</div>
 					</div>
 				</div>
 				<p>菜式：</p>
 				<select id="foodtype">
-					<option value="JPN">日式料理</option>
-					<option value="USA">美式料理</option>
-					<option value="ITA">義式料理</option>
-					<option value="EUR">歐式料理</option>
-					<option value="TWN">台式料理</option>
-					<option value="CHN">中式料理</option>
-					<option value="breakfast">早餐</option>
-					<option value="brunch">早午餐</option>
-					<option value="teatime">下午茶</option>
+					<option id="JPN"value="JPN">日式料理</option>
+					<option id="USA"value="USA">美式料理</option>
+					<option id="ITA"value="ITA">義式料理</option>
+					<option id="EUR"value="EUR">歐式料理</option>
+					<option id="TWN"value="TWN">台式料理</option>
+					<option id="CHN"value="CHN">中式料理</option>
+					<option id="breakfast"value="breakfast">早餐</option>
+					<option id="brunch"value="brunch">早午餐</option>
+					<option id="teatime"value="teatime">下午茶</option>
 				</select>
 				<p>食物分類：<input type="text" id="food_tag" placeholder="食物分類..."></p>
 				<p>人均消費：<input type="text" id="cost" placeholder="人均消費..."></p>
