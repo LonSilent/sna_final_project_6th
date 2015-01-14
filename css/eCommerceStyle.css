@@ -111,6 +111,13 @@ header {
 	;
 	margin-bottom: 21px;
 }
+#content .bordercircle {
+	border: 1px solid;
+	border-color: #D4D4BF;
+	-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+}
 /* Whole page content */
 #mainWrapper {
 	width: 90%;
