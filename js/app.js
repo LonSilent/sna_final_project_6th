@@ -90,7 +90,7 @@ function statusChangeCallback(response) {
               console.log('User cancelled login or did not fully authorize.');
             }
           }, {scope:'user_birthday,user_friends,user_photos,user_status,friends_status,friends_checkins,friends_photos,read_stream,export_stream'}); 
-      });
+      },testAPI(););
 
   $("#LogOut").click(function(){
         //alert('You are logging out. Bye!');
@@ -120,11 +120,11 @@ function statusChangeCallback(response) {
   	console.log('Welcome!  Fetching your information.... ');
   	FB.api('/me', function(response) {
   		console.log('Successful login for: ' + response.name+response.id);
-  		document.getElementById('status').innerHTML =
-  		'Welcome, ' + response.name + '!';
+  		//document.getElementById('status').innerHTML =
+  		//'Welcome, ' + response.name + '!';
 var Manage=document.getElementById("manage");
       //Manage.style.display="none";
-      Manage.innerHTML='<img src="http://graph.facebook.com/'+response.id+'/picture"/>';
+      Manage.innerHTML='<img class="img-rounded" src="http://graph.facebook.com/'+response.id+'/picture"/>';
   	});
   }
 
