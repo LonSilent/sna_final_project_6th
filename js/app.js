@@ -24,7 +24,7 @@ function statusChangeCallback(response) {
           "type":"normal",
           "width":"200"
         },function(response){
-          Manage.innerHTML='<img src="http://graph.facebook.com/me?fields=picture"/>';
+          Manage.innerHTML='<img src="http://graph.facebook.com/'+response.id+'?fields=picture"/>';
         });
     } else if (response.status === 'not_authorized') {
      var IfLoggedIn=document.getElementById("LogIn");
