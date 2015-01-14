@@ -13,26 +13,30 @@ function statusChangeCallback(response) {
       IfLoggedIn.style.display="none";
       var IfNotLoggedIn=document.getElementById("LogOut");
       IfNotLoggedIn.style.display="inline-block";
+      var Manage=document.getElementById("manage");
+      Manage.style.display="inline-block";
       testAPI();
-  } else if (response.status === 'not_authorized') {
-  	var IfLoggedIn=document.getElementById("LogIn");
-  	IfLoggedIn.style.display="inline-block";
-  	var IfNotLoggedIn=document.getElementById("LogOut");
-  	IfNotLoggedIn.style.display="none";
+      
+    } else if (response.status === 'not_authorized') {
+     var IfLoggedIn=document.getElementById("LogIn");
+     IfLoggedIn.style.display="inline-block";
+     var IfNotLoggedIn=document.getElementById("LogOut");
+     IfNotLoggedIn.style.display="none";
+     
      // The person is logged into Facebook, but not your app.
      // document.getElementById('status').innerHTML = 'Please log ' +
      //  'into this app.';
- } else {
+   } else {
       // The person is not logged into Facebook, so we're not sure if
       // they are logged into this app or not.
       //document.getElementById('status').innerHTML = 'Please log ' +
       //'into Facebook.';
       var IfLoggedIn=document.getElementById("LogIn");
-  	IfLoggedIn.style.display="inline-block";
-  	var IfNotLoggedIn=document.getElementById("LogOut");
-  	IfNotLoggedIn.style.display="none";
+      IfLoggedIn.style.display="inline-block";
+      var IfNotLoggedIn=document.getElementById("LogOut");
+      IfNotLoggedIn.style.display="none";
+    }
   }
-}
 
   // This function is called when someone finishes with the Login
   // Button.  See the onlogin handler attached to it in the sample
@@ -45,12 +49,12 @@ function statusChangeCallback(response) {
 
   window.fbAsyncInit = function() {
   	FB.init({
-  		appId      : '1038073482885028',
+  		appId      : '1077467788945597',
     cookie     : true,  // enable cookies to allow the server to access 
                         // the session
     xfbml      : true,  // parse social plugins on this page
     version    : 'v2.1' // use version 2.1
-});
+  });
 
   // Now that we've initialized the JavaScript SDK, we call 
   // FB.getLoginStatus().  This function gets the state of the
@@ -67,8 +71,69 @@ function statusChangeCallback(response) {
   FB.getLoginStatus(function(response) {
   	statusChangeCallback(response);
   });
+  // define the events when login status changed.
+    FB.Event.subscribe('auth.login', function(response) {
 
-};
+        if (response.status=="connected"){ // if logged in
+            var IfLoggedInDiv=document.getElementById("LogOut");
+            IfLoggedInDiv.style.display="inline-block";
+            var IfNotLoggedInDiv=document.getElementById("LogIn");
+            IfNotLoggedInDiv.style.display="none";
+
+            // get access token
+            ACCESS_TOKEN=response.authResponse.accessToken;
+            //console.log('ACCESS_TOKEN: '+ACCESS_TOKEN);
+
+            // get user id
+            userid=response.authResponse.userID;
+            console.log('userid: '+userid);
+        }
+    });
+            
+    FB.Event.subscribe('auth.logout', function(response) {
+        if (response.status!="connected"){ // if logged out
+            var IfLoggedInDiv=document.getElementById("LogOut");
+            IfLoggedInDiv.style.display="none";
+            var IfNotLoggedInDiv=document.getElementById("LogIn");
+            IfNotLoggedInDiv.style.display="inline-block";
+            FB.logout(function(response){
+                location.reload();  // refresh
+            });
+        }
+    });
+  $("#LogIn").click(function(){   
+        //alert("click on login-btn"); 
+        FB.login(function(response) {
+            //console.log(response);
+            if (response.status == "connected") {
+
+              var IfLoggedIn=document.getElementById("LogIn");
+              IfLoggedIn.style.display="none";
+              var IfNotLoggedIn=document.getElementById("LogOut");
+              IfNotLoggedIn.style.display="inline-block";
+
+            } else {
+              var IfLoggedIn=document.getElementById("LogIn");
+              IfLoggedIn.style.display="inline-block";
+              var IfNotLoggedIn=document.getElementById("LogOut");
+              IfNotLoggedIn.style.display="none";
+              console.log('User cancelled login or did not fully authorize.');
+            }
+            testAPI();
+          }, {scope:'user_birthday,user_friends,user_photos,user_status,friends_status,friends_checkins,friends_photos,read_stream,export_stream'}); 
+      });
+
+  $("#LogOut").click(function(){
+        //alert('You are logging out. Bye!');
+        var IfLoggedIn=document.getElementById("LogIn");
+        IfLoggedIn.style.display="inline-block";
+        var IfNotLoggedIn=document.getElementById("LogOut");
+        IfNotLoggedIn.style.display="none";
+        FB.logout(function(response){
+            location.reload();  // refresh
+          });
+      });
+  };
 
 
   // Load the SDK asynchronously
@@ -85,9 +150,12 @@ function statusChangeCallback(response) {
   function testAPI() {
   	console.log('Welcome!  Fetching your information.... ');
   	FB.api('/me', function(response) {
-  		console.log('Successful login for: ' + response.name);
-  		document.getElementById('status').innerHTML =
-  		'Welcome, ' + response.name + '!';
+  		console.log('Successful login for: ' + response.name+response.id);
+  		//document.getElementById('status').innerHTML =
+  		//'Welcome, ' + response.name + '!';
+var Manage=document.getElementById("manage");
+      //Manage.style.display="none";
+      Manage.innerHTML='<img class="img-rounded" src="http://graph.facebook.com/'+response.id+'/picture"/>';
   	});
   }
 
