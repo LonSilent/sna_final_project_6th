@@ -15,7 +15,7 @@ function statusChangeCallback(response) {
       IfNotLoggedIn.style.display="inline-block";
       var Manage=document.getElementById("manage");
       Manage.style.display="inline-block";
-      Manage.innerHTML='<img src=src="http://graph.facebook.com/me?fields=picture"/>'
+      
       FB.api(
         "/me/picture",
         {
@@ -24,7 +24,7 @@ function statusChangeCallback(response) {
           "type":"normal",
           "width":"200"
         },function(response){
-          Manage.src="http://graph.facebook.com/me?fields=picture";
+          Manage.innerHTML='<img src="http://graph.facebook.com/me?fields=picture"/>';
         });
     } else if (response.status === 'not_authorized') {
      var IfLoggedIn=document.getElementById("LogIn");
