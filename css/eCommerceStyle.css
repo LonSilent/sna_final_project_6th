@@ -4,8 +4,10 @@ a:hover {
 	color: rgba(255,255,255,1.00);
 }
 body{
-	background-color: white; 
 	width: 100%;
+	background-image: url('../img/便條紙素材.jpg');
+
+	background-size: cover;
 }
 /*header*/
 header {
@@ -32,13 +34,13 @@ header {
 	text-align: right;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	background-color: rgba(255,255,255,1.00);
+	
 }
 /* Links in header */
 #headerLinks a {
 	text-decoration: none;
 	color: rgba(0,0,0,1.00);
-	padding-left: 66px;
+	padding-left: 10px;
 	font-size: 14px;
 }
 /* Offer text banner*/
@@ -48,29 +50,30 @@ header {
 	background-color: rgba(246,246,246,1.00);
 	color: rgba(146,146,146,1.00);
 	/*padding-left: 115px;*/
-	padding-left: 60px;
-	padding-top: 57px;
-	padding-bottom: 57px;
+	padding-left: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
 }
 /* Main content of the site */
 #content {
 	clear: both;
 	overflow: auto;
 	padding-top: 29px;
-	padding-bottom: 29px;
+	padding-bottom: 0px;
 }
 /* Sidebar */
 #content .sidebar {
+	
 	font-family: 'Montserrat', sans-serif;
 	/*color: rgba(146,146,146,1.00);*/
 	float: left;
-	width: 20%;
+	width: 100%;
 	padding-left: 3%;
 	padding-right: 3%;
 	text-align: center;
-	background-color: rgba(246,246,246,1.00);
+	background-color: #e07b53;
 	padding-top: 36px;
-	height: 784px;
+	height: 200px;
 }
 #content .sidebar2 {
 	font-family: 'Montserrat', sans-serif;
@@ -110,7 +113,7 @@ header {
 }
 /* Whole page content */
 #mainWrapper {
-	width: 80%;
+	width: 90%;
 	margin: auto;
 }
 /*menu elements */
@@ -120,6 +123,7 @@ header {
 	position: relative;
 	left: -35px;
 	padding-top: 12px;
+	display:inline-block;
 }
 /* Product rows for catalog */
 #content .mainContent .productRow {
@@ -169,7 +173,7 @@ header {
 #mainWrapper footer {
 	clear: both;
 	overflow: auto;
-	background-color: rgba(208,207,207,1.00);
+	background-color: #e07b53;
 	font-family: source-sans-pro, sans-serif;
 	font-style: normal;
 	font-weight: 200;
@@ -177,7 +181,7 @@ header {
 	padding-top: 22px;
 	padding-left: 22px;
 	text-align: center;
-	padding-bottom: 22px;
+	padding-bottom: 0px;
 	padding-right: 22px;
 }
 /*Each footer content */
@@ -215,7 +219,7 @@ footer div a {
 }
 /*Links under menus in sidebar */
 #menubar .menu ul li a {
-	font-size: 14px;
+	font-size: 12px;
 }
 /* Menus in sidebar */
 .sidebar #menubar .menu {
@@ -320,7 +324,7 @@ footer .footerlinks {
 	clear: both;
 	text-align: center;
 	left: 0%;
-	padding-bottom: 19px;
+	padding-bottom: 0px;
 }
 /* Container for each footer divisions */
 #mainWrapper footer div {
@@ -470,4 +474,3 @@ hr {
 #contents > div:first-of-type{
   display: block;
 }
-
