@@ -1,16 +1,21 @@
 #pic-select{
-	width: 340px;
+	width: 400px;
 	height: 400px;
 	float: left;
 	padding: 30px;
 	background-color: #e07b53;
+	margin: 2%;
 }
 #selected-pic{
-	height: 100%;
+
+	max-height: 100%;
 	max-width: 100%;
 }
 #input{
-	padding: 30px;
+	margin-right: 10%;
+	float: right;
+	margin-bottom:20px;
+	width:50%; 
 }
 #address{
 	width: 312px;
@@ -22,4 +27,7 @@
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
 	border-radius: 10px;
+}
+#maintext{
+	width: 100%;
 }
