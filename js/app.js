@@ -18,7 +18,7 @@ function statusChangeCallback(response) {
       
       FB.api(
         '/me',function(e){
-          Manage.innerHTML='<img src="http://graph.facebook.com/'+e+'/?fields=picture"/>';
+          Manage.innerHTML='<img src="http://graph.facebook.com/'+e.uid+'/?fields=picture"/>';
         });
     } else if (response.status === 'not_authorized') {
      var IfLoggedIn=document.getElementById("LogIn");
