@@ -1,0 +1,52 @@
+.page{
+	background-image: url('../img/page.jpg');
+	padding-left:0%;
+	width: 75%;
+	position: relative;
+	float: right;
+	min-height: 100px;
+	padding-top:5;
+	
+}
+.resphoto {
+	width:50%;
+    float:left;
+	height:400px;
+}
+.resdata {
+	padding-top:10px;
+	padding-left:50px;
+	width:50%;
+    float:left;
+	height:400px;
+}
+.album{
+	width:50%;
+    float:left;
+	height:400px;
+}
+.foodcontext{
+	width:50%;
+    float:left;
+    height:400px;
+	padding-right:5%;
+}
+.introduce{
+	line-height:30px; 
+	text-align:left; 
+	font-weight: bold;
+	font-size:large;
+}
+#pic_door{
+	width:100%; 
+}
+.tsoo{
+height:3px;
+color:red;
+background-color:#000040;
+}
+h1 {
+    color: firebrick;
+    font-family:Microsoft JhengHei;
+    font-size:275%;
+      }
