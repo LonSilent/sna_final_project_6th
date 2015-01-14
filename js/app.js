@@ -119,12 +119,12 @@ function statusChangeCallback(response) {
   function testAPI() {
   	console.log('Welcome!  Fetching your information.... ');
   	FB.api('/me', function(response) {
-  		console.log('Successful login for: ' + response.name);
+  		console.log('Successful login for: ' + response.name+response.id);
   		document.getElementById('status').innerHTML =
   		'Welcome, ' + response.name + '!';
 var Manage=document.getElementById("manage");
       //Manage.style.display="none";
-      Manage.innerHTML='<img src="http://graph.facebook.com/'+response.photo+'"/>';
+      Manage.innerHTML='<img src="http://graph.facebook.com/'+response.id+'/picture"/>';
   	});
   }
 
