@@ -8,7 +8,7 @@ if (fileUploadControl.files.length > 0) {
   var name = "photo.jpg";
   var parseFile = new Parse.File(name, file);
 }
-
+var restaurantTitle=document.getElementById("title").value;
 var restaurantName=document.getElementById("name").value;
 var restaurantDate=new Date(document.getElementById("date").value);
 var restaurantCity=$("#city option:selected").text();
@@ -25,6 +25,7 @@ var food_CommentObject= Parse.Object.extend("Food_Comment");
 var Food_CommentObject= new food_CommentObject();
 
 Food_CommentObject.save({
+  title:restaurantTitle,
   restaurant: restaurantName,
   date:restaurantDate,
   city:restaurantCity,
