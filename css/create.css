@@ -23,13 +23,6 @@
 	width: 312px;
 }
 
-.inputCircle{
-	border: 1px solid;
-	border-color: #D4D4BF;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	border-radius: 10px;
-}
 #maintext{
 	width: 100%;
 }
