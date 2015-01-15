@@ -7,7 +7,7 @@ query.equalTo("foodtype","美式料理");
 query.find({
 	success: function(results) {
 
-		alert("Successfully retrieved " + results.length + " scores.");
+		
     // Do something with the returned Parse.Object values
     for (var i = 0; i < results.length; i++) { 
     	var object = results[i];
@@ -15,7 +15,7 @@ document.getElementById('title'+i).innerText=object.get('title');
 var picObj=document.getElementById("pic-select"+i);
     	picObj.src=object.get('pic').url();
     	document.getElementById('maintext'+i).innerText=object.get('maintext');
-    	alert(object.id + ' - ' + object.get('restaurant'));
+    	
     }
 },
 error: function(error) {
