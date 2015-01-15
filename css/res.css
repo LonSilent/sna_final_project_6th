@@ -58,3 +58,7 @@ padding-left: 4%;
   float: left;
   padding: 30px;
 }
+p{
+  max-height: 200px;
+  overflow: hidden;
+}
