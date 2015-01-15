@@ -45,6 +45,7 @@ header {
 }
 /* Offer text banner*/
 #offer {
+	height: 320px;
 	font-family: 'Montserrat', sans-serif;
 	clear: both;
 	background-color: rgba(246,246,246,1.00);

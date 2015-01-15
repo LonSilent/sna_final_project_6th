@@ -5,6 +5,7 @@
 	padding: 30px;
 	background-color: #e07b53;
 	margin: 2%;
+	padding-top: 15%;
 }
 #selected-pic{
 
@@ -12,6 +13,7 @@
 	max-width: 100%;
 }
 #input{
+	padding-top: 5%;
 	margin-right: 10%;
 	float: right;
 	margin-bottom:20px;
