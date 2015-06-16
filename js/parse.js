@@ -1,5 +1,5 @@
 Parse.initialize("HAycAB0xf0Lgvp5hzqGzGdN5n80Fz25cvmgcVxUi", "9GdZGVNZV0sngbvQAmWWZv2g81PUfp16cftmXTc7");
-var currentUser=Parse.User.current();
+// var currentUser=Parse.User.current();
 
 function submit(){
 var fileUploadControl = $("#profilePhotoFileUpload")[0];
@@ -38,7 +38,7 @@ Food_CommentObject.save({
   worktime:restaurantWorktime,
   maintext:restaurantMaintext
 }).then(function(Food_CommentObject) {
-	//alert(restaurantDate);
+	alert(restaurantDate);
 });
 
 
