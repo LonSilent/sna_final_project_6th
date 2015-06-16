@@ -1,9 +1,9 @@
 Parse.initialize("HAycAB0xf0Lgvp5hzqGzGdN5n80Fz25cvmgcVxUi", "9GdZGVNZV0sngbvQAmWWZv2g81PUfp16cftmXTc7");
-
+objectId = getValue("id")
 
 var Food_CommentObject = Parse.Object.extend("Food_Comment");
 var query = new Parse.Query(Food_CommentObject);
-query.equalTo("foodtype","美式料理");
+query.equalTo("objectId",objectId);
 query.find({
 	success: function(results) {
 
@@ -27,3 +27,25 @@ error: function(error) {
 	
 }
 });
+
+function getValue(varname)
+{
+  var url = window.location.href;
+  var qparts = url.split("?");
+  if (qparts.length == 0){return "";}
+  var query = qparts[1];
+  var vars = query.split("&amp;");
+  var value = "";
+  for (i=0; i<vars.length; i++)
+  {
+    var parts = vars[i].split("=");
+    if (parts[0] == varname)
+    {
+      value = parts[1];
+      break;
+    }
+  }
+  value = unescape(value);
+  value.replace(/\+/g," ");
+  return value;
+}
