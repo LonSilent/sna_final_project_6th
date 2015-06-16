@@ -51,7 +51,7 @@ function submit(){
 		maintext:restaurantMaintext
 	}).then(function(object) {
 		alert("save comment success");
-		window.location = "index.html" ;
+		window.location = "objectpage.html" ;
 	});
 
 }
