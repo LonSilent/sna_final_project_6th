@@ -37,7 +37,7 @@ Food_CommentObject.save({
   cost:restaurantcost,
   worktime:restaurantWorktime,
   maintext:restaurantMaintext
-}).then(function(Food_CommentObject) {
+}).then(function(object) {
 	alert(restaurantDate);
 });
 
