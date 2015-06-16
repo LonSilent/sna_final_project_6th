@@ -27,7 +27,7 @@ var Food_CommentObject= new food_CommentObject();
 Food_CommentObject.save({
   title:restaurantTitle,
   restaurant: restaurantName,
-  restaurantdate:restaurantDate,
+  //restaurantdate:restaurantDate,
   city:restaurantCity,
   county:restaurantCounty,
   address:restaurantAddress,
