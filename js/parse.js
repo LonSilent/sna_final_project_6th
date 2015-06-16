@@ -27,7 +27,7 @@ var Food_CommentObject= new food_CommentObject();
 Food_CommentObject.save({
   title:restaurantTitle,
   restaurant: restaurantName,
-  //restaurantdate:restaurantDate,
+  restaurantdate:restaurantDate,
   city:restaurantCity,
   county:restaurantCounty,
   address:restaurantAddress,
@@ -38,7 +38,7 @@ Food_CommentObject.save({
   worktime:restaurantWorktime,
   maintext:restaurantMaintext
 }).then(function(object) {
-	alert(restaurantDate);
+	// alert(restau?rantDate);
 });
 
 
@@ -48,6 +48,7 @@ parseFile.save({pic:name}).then(function() {
 	alert("success");
   // The file has been saved to Parse.
 }, function(error) {
+  alert("can't save picture")
   // The file either could not be read, or could not be saved to Parse.
 });
 
