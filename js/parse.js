@@ -38,14 +38,14 @@ Food_CommentObject.save({
   worktime:restaurantWorktime,
   maintext:restaurantMaintext
 }).then(function(object) {
-	// alert(restau?rantDate);
+	alert("save comment success");
 });
 
 
 
 
 parseFile.save({pic:name}).then(function() {
-	alert("success");
+	alert("save picture success");
   // The file has been saved to Parse.
 }, function(error) {
   alert("can't save picture")
