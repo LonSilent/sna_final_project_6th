@@ -27,7 +27,7 @@ var Food_CommentObject= new food_CommentObject();
 Food_CommentObject.save({
   title:restaurantTitle,
   restaurant: restaurantName,
-  //date:restaurantDate,
+  restaurantdate:restaurantDate,
   city:restaurantCity,
   county:restaurantCounty,
   address:restaurantAddress,
@@ -37,7 +37,7 @@ Food_CommentObject.save({
   cost:restaurantcost,
   worktime:restaurantWorktime,
   maintext:restaurantMaintext
-}).then(function(object) {
+}).then(function(Food_CommentObject) {
 	alert(restaurantDate);
 });
 
