@@ -1,5 +1,4 @@
 foodtype = getValue("foodtype")
-// console.log(foodtype)
 switch(foodtype){
   case 'japanese':
   type = "日式料理";
@@ -52,8 +51,7 @@ function getValue(varname)
 }
 
 Parse.initialize("HAycAB0xf0Lgvp5hzqGzGdN5n80Fz25cvmgcVxUi", "9GdZGVNZV0sngbvQAmWWZv2g81PUfp16cftmXTc7");
-
-
+document.getElementById('tab0').innerHTML = type
 
 var Food_CommentObject = Parse.Object.extend("Food_Comment");
 var query = new Parse.Query(Food_CommentObject);
