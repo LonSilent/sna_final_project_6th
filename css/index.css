@@ -65,7 +65,9 @@ font-size: 14px;
 	width:100%;
 }
 .row{
-	padding-top:25%
+	padding-top:25%;
+	margin-right:0px;
+	margin-left: 0px;
 }
 .btn-default{
 	
