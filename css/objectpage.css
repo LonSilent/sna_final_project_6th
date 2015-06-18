@@ -1,6 +1,12 @@
 #pic-select{
-	width: 300px;
+	max-width: 400px;
+	width: 100%;
+	max-height: 400px
 }
-.page{
+#page{
 	min-height: 1700px;
+	/*display: block;*/
+}
+#ads{
+	float: left;
 }

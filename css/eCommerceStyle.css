@@ -30,8 +30,9 @@ header {
 /* div for Links in header */
 #headerLinks {
 	float: left;
-	width: calc( 100% - 139px );
-	text-align: right;
+	/*width: calc( 100% - 139px );*/
+	width: 100%;
+	/*text-align: right;*/
 	padding-top: 10px;
 	padding-bottom: 10px;
 	
@@ -45,7 +46,8 @@ header {
 }
 /* Offer text banner*/
 #offer {
-	height: 320px;
+	/*height: 320px;*/
+	height: 400px;
 	font-family: 'Montserrat', sans-serif;
 	clear: both;
 	background-color: rgba(246,246,246,1.00);
@@ -358,7 +360,7 @@ header #headerLinks a {
 }
 /* Offer- Text banner */
 #mainWrapper #offer {
-	padding-left: 22%;
+	/*padding-left: 22%;*/
 }
 /* Paragraphs in footer */
 footer .footerlinks p {
@@ -372,7 +374,7 @@ footer .footerlinks p {
 #mainWrapper header #headerLinks {
 	width: 100%;
 	text-align: center;
-	background-color: rgba(190,190,190,1.00);
+	/*background-color: rgba(190,190,190,1.00);*/
 	padding-bottom: 21px;
 }
 /* Logo placeholder*/
